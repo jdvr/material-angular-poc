@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Persona} from "./persona";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'material-angular-poc';
+  title = 'Yo q se';
+  persona: Persona = {
+    nombre: "",
+    apellidos: "",
+    edad: 0,
+    dni: 0,
+    cumpleanos: new Date(),
+    colorFavorito:"Verde",
+    sexo: "nb",
+    notas: "lslsls"
+  }
+
+  getCurrentPersona () {
+    return JSON.stringify(this.persona)
+  }
 }
